@@ -1,9 +1,12 @@
 import './App.css'
+import Accordion from './pages/accordionContent';
 
 
 const App = () => {
   return (
-    <div className='text-center text-3xl'>App</div>
+    <div>
+      <Accordion />
+    </div>
   )
 }
 

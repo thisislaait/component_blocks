@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MdSearch } from 'react-icons/md';
+import SearchButtonOne from '../Buttons/SearchButtonOne';
 
 // Separate component for the search bar
 const SearchBarOne = ({ onSearch }) => {
@@ -19,12 +19,7 @@ const SearchBarOne = ({ onSearch }) => {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <button
-        className="bg-[#ebfffc] rounded-full w-10 h-10 cursor-pointer"
-        onClick={handleSearch}
-      >
-        <MdSearch className="text-[#555] flex items-center w-8 h-8 pl-2.5" />
-      </button>
+      <SearchButtonOne onClick={handleSearch} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBarOne from '../components/Forms/searchOne';
 import WeatherDetails from '../lib/weatherData';
 
@@ -14,8 +14,14 @@ const WeatherApp = () => {
     setWeatherData(data);
   };
 
+  // Fetch weather data for the default location when the component mounts
+  useEffect(() => {
+    const defaultLocation = 'Lagos';
+    checkWeather(defaultLocation);
+  }, []);
+
   return (
-    <div className="card text-white py-10 px-8 text-center rounded-md">
+    <div className="card text-white py-10 px-8 text-center rounded-md mb-20 ">
       {/* SearchBar component */}
       <SearchBarOne onSearch={checkWeather} />
 
